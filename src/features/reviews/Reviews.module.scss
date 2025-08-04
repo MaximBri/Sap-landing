@@ -1,0 +1,98 @@
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 170px var(--margin-inline) 114px;
+  &__background {
+    margin-bottom: -15px;
+    background-image: url('./icons/bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    gap: 30px;
+    &-title {
+      font-weight: 500;
+      font-size: 90px;
+      line-height: 89%;
+      letter-spacing: -0.03em;
+    }
+    &-description {
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 128%;
+      color: var(--text-opacity);
+    }
+  }
+  &__list {
+    display: flex;
+    &-item {
+      background: var(--text-heading);
+      border: 1px solid var(--background-cards);
+      border-radius: 12px;
+      width: 447px;
+      padding: 57px 100px 56px 36px;
+      &-title {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 120%;
+        max-width: 55%;
+      }
+      &-description {
+        padding: 18px 0 16px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: var(--text-opacity);
+      }
+      &-author {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #efefef;
+        margin-bottom: 4px;
+      }
+      &-other {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        color: var(--text-primary);
+        & > strong {
+          font-weight: 400;
+          color: var(--text-viol);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1540px) {
+  .reviews {
+    padding: 140px var(--margin-inline) 80px;
+    &__texts {
+      max-width: 30%;
+      &-title {
+        font-size: 70px;
+      }
+      &-description {
+        font-size: 20px;
+      }
+    }
+    &__list {
+      &-item {
+        width: 400px;
+        padding: 45px 80px 45px 30px;
+        &-title {
+          font-size: 22px;
+          max-width: 65%;
+        }
+        &-description {
+          padding: 14px 0 12px;
+        }
+      }
+    }
+  }
+}

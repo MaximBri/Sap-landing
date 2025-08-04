@@ -1,0 +1,102 @@
+.work {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 40px;
+  background: var(--bockground-works);
+  width: calc(67% - 11px);
+  padding: 15px 35px 35px;
+  gap: 23px;
+  background-image: url('./icons/bg.png');
+  background-size: auto 100%;
+  background-position: 107% 50%;
+  background-repeat: no-repeat;
+  &__left {
+    margin-top: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33%;
+  }
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 15px;
+    &-icon {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 47px;
+      height: 47px;
+      border-radius: 50%;
+      background-color: var(--border-secondary);
+    }
+    &-image {
+      width: 100%;
+      border-radius: 37px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    &-item {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 155%;
+      text-align: center;
+      padding: 2px 26px;
+      border-radius: 30px;
+      background: var(--background-button-other);
+    }
+  }
+  &__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  &__texts {
+    display: flex;
+    flex-direction: column;
+  }
+  &__site {
+    font-family: var(--second-family);
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 98%;
+  }
+  &__collaborator {
+    margin-top: 10px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 13px;
+    & > strong {
+      font-weight: 400;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .work {
+    width: 100%;
+  }
+}

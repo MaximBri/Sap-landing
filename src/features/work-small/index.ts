@@ -1,0 +1,1 @@
+export { WorkSmall } from './WorkSmall'
