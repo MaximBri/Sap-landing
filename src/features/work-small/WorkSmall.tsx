@@ -3,6 +3,7 @@ import { WorkModel } from '../works/model/constants'
 import Image from 'next/image'
 import LinkArrowSvg from '@/shared/icons/link-arrow.svg'
 import styles from './WorkSmall.module.scss'
+import Link from 'next/link'
 
 export const WorkSmall: FC<{ data: WorkModel }> = ({ data }) => {
   return (
@@ -38,13 +39,20 @@ export const WorkSmall: FC<{ data: WorkModel }> = ({ data }) => {
           <h3 className={styles.work__title}>{data.title}</h3>
           {data.collaborator && (
             <h4 className={styles.work__collaborator}>
-              совместно с <strong>{data.collaborator}</strong>
+              совместно с{' '}
+              <Link href={data.collaborator.link} target='_blank'>
+                {data.collaborator.name}
+              </Link>
             </h4>
           )}
         </div>
-        <div className={styles['work__bottom-icon']}>
+        <Link
+          href={data.link}
+          target='_blank'
+          className={styles['work__bottom-icon']}
+        >
           <Image src={LinkArrowSvg} alt='arrow' width={22} height={22}></Image>
-        </div>
+        </Link>
       </div>
     </li>
   )

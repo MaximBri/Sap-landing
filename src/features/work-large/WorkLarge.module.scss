@@ -36,6 +36,8 @@
     }
     &-image {
       width: 100%;
+      margin-left: auto;
+      max-width: 350px;
       border-radius: 37px;
     }
   }
@@ -88,7 +90,8 @@
     font-family: var(--second-family);
     font-weight: 400;
     font-size: 13px;
-    & > strong {
+    & > a {
+      color: var(--text-primary);
       font-weight: 400;
       text-decoration: underline;
       text-decoration-skip-ink: none;

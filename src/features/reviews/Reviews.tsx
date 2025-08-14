@@ -15,7 +15,7 @@ export const Reviews = () => {
   const VISIBLE_CARDS = 2
   const SLIDE_STEP = 1
 
-  const maxIndex = reviews.length - VISIBLE_CARDS
+  const maxIndex = reviews.length - VISIBLE_CARDS + 1
 
   const handlePrev = () => {
     setActiveElement((prev) => Math.max(prev - SLIDE_STEP, 0))

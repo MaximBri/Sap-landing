@@ -4,6 +4,7 @@ import LinkArrowSvg from '@/shared/icons/link-arrow.svg'
 import LinkSvg from './icons/link.svg'
 import styles from './WorkLarge.module.scss'
 import { WorkModel } from '../works/model/constants'
+import Link from 'next/link'
 
 export const WorkLarge: FC<{ data: WorkModel; category: string }> = ({
   data,
@@ -46,19 +47,26 @@ export const WorkLarge: FC<{ data: WorkModel; category: string }> = ({
           <h3 className={styles.work__title}>{data.title}</h3>
           {data.collaborator && (
             <h4 className={styles.work__collaborator}>
-              совместно с <strong>{data.collaborator}</strong>
+              совместно с{' '}
+              <Link href={data.collaborator.link} target='_blank'>
+                {data.collaborator.name}
+              </Link>
             </h4>
           )}
         </div>
       </div>
       <div className={styles.work__right}>
-        <div className={styles['work__right-icon']}>
+        <Link
+          href={data.link}
+          target='_blank'
+          className={styles['work__right-icon']}
+        >
           <Image src={LinkArrowSvg} alt='arrow' width={22} height={22}></Image>
-        </div>
+        </Link>
         {data.folder && (
           <Image
             className={styles['work__right-image']}
-            src={`/works/${category}/${data.folder}/main.png`}
+            src={`/works/${category}/${data.folder}/${data.image}`}
             width={650}
             height={325}
             alt='work'

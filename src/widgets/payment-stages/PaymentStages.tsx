@@ -1,3 +1,4 @@
+import { Graphic } from '../graphic'
 import styles from './PaymentStages.module.scss'
 
 export const PaymentStages = () => {
@@ -45,16 +46,14 @@ export const PaymentStages = () => {
         {/* <h4 className={styles['payment__decore-subtitle']}>
           Ac praesent lorem iaculis
         </h4> */}
-        {/* <div>
-          <Image src={StartSvg} alt='decore' width={190} height={176}></Image>
-        </div> */}
+        <Graphic />
         <ul className={styles['payment__texts']}>
           <li className={styles['payment__texts-item']}>
-            Ускорьте процесс привлечения клиентов с помощью
-            понятных и высокоэффективных целевых страниц.
+            Ускорьте процесс привлечения клиентов с помощью понятных и
+            высокоэффективных целевых страниц.
           </li>
           <li className={styles['payment__texts-item']}>
-            Цель — максимальная эффективность при оптимальных вложениях. 
+            Цель — максимальная эффективность при оптимальных вложениях.
           </li>
           <li className={styles['payment__texts-item']}>
             Получите максимальную отдачу от своего бюджета с помощью эффективной

@@ -1,11 +1,15 @@
 export interface WorkModel {
   title: string
   tags: string[]
-  collaborator?: string
+  collaborator?: {
+    name: string
+    link: string
+  }
   image?: string
   stack?: string[]
   site?: string
   folder?: string
+  link: string
   type: 'large' | 'small'
 }
 
@@ -21,38 +25,41 @@ export const worksList: WorkCategory[] = [
     techname: 'marketing',
     works: [
       {
-        title: 'сайт для детского парка развлечений ПАКАБАТА',
-        tags: ['проектирование', 'дизайн', 'вёрстка'],
-        collaborator: 'Mark Weber',
-        image: 'main.png',
-        stack: ['tilda.svg', 'figma.svg'],
+        title: 'SWOT-анализ компании Сбер Акселератор',
+        tags: ['маркетинг'],
+        // collaborator: { name: 'Mark Weber', link: '#' },
+        image: 'sber.svg',
+        // stack: ['tilda.svg', 'figma.svg'],
         site: 'pakabata-nn.ru',
         folder: 'sber',
         type: 'large',
+        link: '',
       },
       {
-        title: 'обозначить возможные каналы продаж для Терра Пи',
+        title: 'Обозначить возможные каналы продаж для Терра Пи',
         tags: ['маркетинг'],
-        collaborator: 'Jekyll&Hyde',
-        stack: ['tilda.svg', 'figma.svg'],
+        // collaborator: { name: 'Jekyll&Hyde', link: '#' },
+        // stack: ['tilda.svg', 'figma.svg'],
         type: 'small',
+        link: '',
       },
       {
-        title: 'защита персональных данных b_152',
-        tags: ['вёрстка'],
-        collaborator: 'Jekyll&Hyde',
-        stack: ['tilda.svg', 'figma.svg'],
+        title: 'Защита персональных данных b_152',
+        tags: ['маркетинг'],
+        // collaborator: { name: 'Jekyll&Hyde', link: '#' },
+        // stack: ['tilda.svg', 'figma.svg'],
         type: 'small',
+        link: '',
       },
       {
-        title:
-          'Разработка маркетингового плана для привлечения аудитории 18-25 лет',
-        tags: ['проектирование', 'дизайн', 'вёрстка'],
-        collaborator: 'Mark Weber',
-        image: 'main.png',
-        stack: ['tilda.svg', 'figma.svg'],
+        title: 'Разработка маркетингового плана для компании Level Group',
+        tags: ['маркетинг'],
+        // collaborator: { name: 'Jekyll&Hyde', link: '#' },
+        image: 'level.jpg',
+        // stack: ['tilda.svg', 'figma.svg'],
         folder: 'level',
         type: 'large',
+        link: '',
       },
     ],
   },
@@ -63,34 +70,39 @@ export const worksList: WorkCategory[] = [
       {
         title: 'Сайт для FULLSTACK разработчика',
         tags: ['проектирование', 'разработка', 'адаптивность', 'тёмная тема'],
-        image: 'main.png',
-        stack: ['tilda.svg', 'figma.svg'],
+        image: 'logo.png',
+        // stack: ['tilda.svg', 'figma.svg'],
+        // collaborator: { name: 'MaximBars', link: 'https://t.me/Maxim_Bars' },
         folder: 'alice',
         type: 'large',
+        link: 'https://maximbri.github.io/AliceWebSite/',
       },
       {
         title: 'Лендинг для платформы разработки блокчейна',
         tags: ['вёрстка'],
-        collaborator: 'Jekyll&Hyde',
-        stack: ['tilda.svg', 'figma.svg'],
+        // collaborator: { name: 'MaximBars', link: 'https://t.me/Maxim_Bars' },
+        // stack: ['tilda.svg', 'figma.svg'],
         type: 'small',
+        link: 'https://maximbri.github.io/Exploit/',
       },
       {
-        title: 'Разработка сайта для сети аптек',
+        title: 'Разработка сайта для аренды квартир',
         tags: ['вёрстка', 'дизайн', 'разработка'],
-        collaborator: 'Jekyll&Hyde',
-        stack: ['tilda.svg', 'figma.svg'],
+        // collaborator: { name: 'MaximBars', link: 'https://t.me/Maxim_Bars' },
+        // stack: ['tilda.svg', 'figma.svg'],
         type: 'small',
+        link: 'https://maximbri.github.io/Rent-Apartments-59/',
       },
       {
-        title:
-          'Разработка лендинга для AI-стартапа',
+        title: 'Разработка лендинга для AI-стартапа',
         tags: ['разработка', 'проектирование'],
-        image: 'main.png',
-        stack: ['tilda.svg', 'figma.svg'],
-        site: '',
+        image: 'logo.png',
+        // stack: ['tilda.svg', 'figma.svg'],
+        // collaborator: { name: 'MaximBars', link: 'https://t.me/Maxim_Bars' },
+        site: 'https://space-chat.ai/',
         folder: 'space-chat',
         type: 'large',
+        link: 'https://space-chat.ai/',
       },
     ],
   },
