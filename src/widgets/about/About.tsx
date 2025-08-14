@@ -33,24 +33,27 @@ export const About = () => {
         </div>
         <ul className={styles.about__list}>
           <li className={styles['about__list-item']}>
-            <h3 className={styles['about__list-item-title']}>Lorem ipsum dolor sit amet. Lorem ipsum.</h3>
+            <h3 className={styles['about__list-item-title']}>100+</h3>
             <p className={styles['about__list-item-subtitle']}>
-              We operate as an extension of your team, proactive and easily
-              approachable.
+              Трансформировано брендов
+            </p>
+          </li>
+          {/* <li className={styles['about__list-item']}>
+            <h3 className={styles['about__list-item-title']}>300M+</h3>
+            <p className={styles['about__list-item-subtitle']}>
+              Произведено впечатлений
+            </p>
+          </li> */}
+          <li className={styles['about__list-item']}>
+            <h3 className={styles['about__list-item-title']}>5x</h3>
+            <p className={styles['about__list-item-subtitle']}>
+              Средняя рентабельность инвестиций в кампании
             </p>
           </li>
           <li className={styles['about__list-item']}>
-            <h3 className={styles['about__list-item-title']}>Lorem ipsum dolor sit amet. Lorem ipsum.</h3>
+            <h3 className={styles['about__list-item-title']}>25M+</h3>
             <p className={styles['about__list-item-subtitle']}>
-              We operate as an extension of your team, proactive and easily
-              approachable.
-            </p>
-          </li>
-          <li className={styles['about__list-item']}>
-            <h3 className={styles['about__list-item-title']}>Lorem ipsum dolor sit amet. Lorem ipsum.</h3>
-            <p className={styles['about__list-item-subtitle']}>
-              We operate as an extension of your team, proactive and easily
-              approachable.
+              Рост доходов клиентов
             </p>
           </li>
         </ul>

@@ -1,12 +1,10 @@
-import Image from 'next/image'
 import styles from './PaymentStages.module.scss'
-import StartSvg from './icons/start.png'
 
 export const PaymentStages = () => {
   return (
     <div className={styles.payment__wrapper}>
       <section className={`container ${styles.payment}`}>
-        <h2 className={styles.payment__title}>Lorem ipsum dolor sit amet</h2>
+        <h2 className={styles.payment__title}>Наши преимущества</h2>
         <ul className={styles.payment__list}>
           <li className={styles['payment__list-item']}>
             <h3 className={styles['payment__list-item-title']}>
@@ -43,25 +41,24 @@ export const PaymentStages = () => {
             </p>
           </li>
         </ul>
-        <h3 className={styles['payment__decore-title']}>
-          Lorem ipsum dolor sit
-        </h3>
-        <h4 className={styles['payment__decore-subtitle']}>
+        <h3 className={styles['payment__decore-title']}>Как мы работаем</h3>
+        {/* <h4 className={styles['payment__decore-subtitle']}>
           Ac praesent lorem iaculis
-        </h4>
+        </h4> */}
         {/* <div>
           <Image src={StartSvg} alt='decore' width={190} height={176}></Image>
         </div> */}
         <ul className={styles['payment__texts']}>
           <li className={styles['payment__texts-item']}>
-            Lorem ipsum dolor sit amet consectetur. Scelerisque.
+            Ускорьте процесс привлечения клиентов с помощью
+            понятных и высокоэффективных целевых страниц.
           </li>
           <li className={styles['payment__texts-item']}>
-            Accelerate the lead generation process through clear and
-            high-performing landing pages.
+            Цель — максимальная эффективность при оптимальных вложениях. 
           </li>
           <li className={styles['payment__texts-item']}>
-            Get the most out of your budget with an effective bidding strategy.
+            Получите максимальную отдачу от своего бюджета с помощью эффективной
+            стратегии проведения торгов.
           </li>
         </ul>
       </section>
