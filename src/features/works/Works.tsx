@@ -30,15 +30,6 @@ export const Works = () => {
               <div></div> {item.title}
             </button>
           ))}
-          {/* <button className={styles['works__nav-item']}>
-            Больше
-            <Image
-              src={rightArrowSvg}
-              alt='arrow'
-              width={22}
-              height={32}
-            ></Image>
-          </button> */}
         </nav>
       </div>
       <ul className={styles.works__list}>

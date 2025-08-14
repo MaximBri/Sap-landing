@@ -31,8 +31,8 @@ export const worksList: WorkCategory[] = [
         type: 'large',
       },
       {
-        title: 'защита персональных данных b_152',
-        tags: ['вёрстка'],
+        title: 'обозначить возможные каналы продаж для Терра Пи',
+        tags: ['маркетинг'],
         collaborator: 'Jekyll&Hyde',
         stack: ['tilda.svg', 'figma.svg'],
         type: 'small',
