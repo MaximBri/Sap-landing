@@ -9,10 +9,15 @@ export const Main = () => {
         Точечный подход к маркетингу не для каждого бизнеса
       </h2>
       <nav className={styles.main__nav}>
-        <button className={`button ${styles['main__nav-button-start']}`}>
+        <Link
+          href={'#form'}
+          className={`button ${styles['main__nav-button-start']}`}
+        >
           Начать
-        </button>
-        <Link href={'#projects'} className={styles['main__nav-button-works']}>Кейсы</Link>
+        </Link>
+        <Link href={'#projects'} className={styles['main__nav-button-works']}>
+          Кейсы
+        </Link>
       </nav>
       <div className={styles.main__decore}></div>
     </section>

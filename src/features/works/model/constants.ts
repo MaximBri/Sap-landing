@@ -33,7 +33,7 @@ export const worksList: WorkCategory[] = [
         site: 'pakabata-nn.ru',
         folder: 'sber',
         type: 'large',
-        link: '',
+        link: '/presentations/mira19.pdf',
       },
       {
         title: 'Обозначить возможные каналы продаж для Терра Пи',
@@ -41,7 +41,7 @@ export const worksList: WorkCategory[] = [
         // collaborator: { name: 'Jekyll&Hyde', link: '#' },
         // stack: ['tilda.svg', 'figma.svg'],
         type: 'small',
-        link: '',
+        link: '/presentations/terra.pdf',
       },
       {
         title: 'Защита персональных данных b_152',
@@ -59,7 +59,7 @@ export const worksList: WorkCategory[] = [
         // stack: ['tilda.svg', 'figma.svg'],
         folder: 'level',
         type: 'large',
-        link: '',
+        link: '/presentations/level.pdf',
       },
     ],
   },

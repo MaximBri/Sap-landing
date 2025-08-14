@@ -28,7 +28,9 @@ export const Header = () => {
             </Link>
           </nav>
         </div>
-        <button className={`button ${styles.header__button}`}>Написать</button>
+        <Link href={'#form'} className={`button ${styles.header__button}`}>
+          Написать
+        </Link>
       </header>
       <Image
         width={1920}

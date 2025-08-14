@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './Quote.module.scss'
 
 export const Quote = () => {
@@ -8,7 +9,7 @@ export const Quote = () => {
           Доверие - это основа всех успешных отношений, и в бизнесе это не
           исключение
         </h2>
-        <button className={`button ${styles.quote__button}`}>Написать</button>
+        <Link href={'#form'} className={`button ${styles.quote__button}`}>Написать</Link>
       </section>
     </div>
   )

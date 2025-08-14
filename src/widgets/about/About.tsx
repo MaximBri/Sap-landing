@@ -38,12 +38,6 @@ export const About = () => {
               Трансформировано брендов
             </p>
           </li>
-          {/* <li className={styles['about__list-item']}>
-            <h3 className={styles['about__list-item-title']}>300M+</h3>
-            <p className={styles['about__list-item-subtitle']}>
-              Произведено впечатлений
-            </p>
-          </li> */}
           <li className={styles['about__list-item']}>
             <h3 className={styles['about__list-item-title']}>5x</h3>
             <p className={styles['about__list-item-subtitle']}>

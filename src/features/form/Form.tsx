@@ -17,7 +17,7 @@ export const Form = () => {
 
   return (
     <div className={styles.form__wrapper}>
-      <section className={`container ${styles.form}`}>
+      <section className={`container ${styles.form}`} id='form'>
         <div className={styles.form__texts}>
           <h2 className={styles.form__title}>Давайте начнем!</h2>
           <a className={styles.form__email} href={`mailto:${Email}`}>
