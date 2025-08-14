@@ -1,63 +1,93 @@
 import Image from 'next/image'
 import styles from './Services.module.scss'
 import bgPng from './icons/bg.png'
+import { FC } from 'react'
+import Link from 'next/link'
 
-const servicesList = [
-  'WEB-приложения',
-  'CRM',
-  'Интернет-магазины',
-  'Мобильные приложения',
-  'Корпоративные сайты',
-  'UХ-аудит',
-]
+interface Props {
+  title: string
+  subtitle?: string
+  abilityList?: string[]
+  isMain?: boolean
+  sideList?: { title: string; link: string }[]
+  price: string
+  id: string
+}
 
-export const Services = () => {
+export const Services: FC<Props> = ({
+  title,
+  abilityList,
+  subtitle,
+  isMain = false,
+  sideList,
+  price,
+  id,
+}) => {
   return (
-    <div className={styles.services__wrapper}>
-      <Image
-        className={styles.services__decore}
-        src={bgPng}
-        alt='decore'
-        width={1920}
-        height={1076}
-      ></Image>
-      <section id='services' className={`container ${styles.services}`}>
+    <div className={styles.services__wrapper} id={id}>
+      {isMain && (
+        <Image
+          className={styles.services__decore}
+          src={bgPng}
+          alt='decore'
+          width={1920}
+          height={1076}
+        ></Image>
+      )}
+      <section
+        id='services'
+        className={`container ${
+          isMain ? styles['services--main'] : styles.services
+        }`}
+      >
         <div className={styles.services__top}>
-          <div className={styles['services__top-left']}>
-            <h3 className={styles['services__top-title']}>Наши Услуги</h3>
-            <h2 className={styles['services__top-subtitle']}>UX/UI дизайн</h2>
-            <p className={styles['services__top-description']}>
-              Проектирование удобных, понятных и эстетичных пользовательских
-              интерфейсов
-            </p>
+          <div
+            className={
+              isMain
+                ? styles['services__top-left--main']
+                : styles['services__top-left']
+            }
+          >
+            {isMain && (
+              <h3 className={styles['services__top-title']}>Наши Услуги</h3>
+            )}
+            <h2 className={styles['services__top-subtitle']}>{title}</h2>
+            {subtitle && (
+              <p className={styles['services__top-description']}>{subtitle}</p>
+            )}
           </div>
-          <ul className={styles['services__top-right']}>
-            <li className={styles['services__top-phrase']}>UX/UI - дизайн</li>
-            <li className={styles['services__top-phrase']}>
-              Web Dev & Maintenance
-            </li>
-            <li className={styles['services__top-phrase']}>
-              Conversion Rate Optimization
-            </li>
-            <li className={styles['services__top-phrase']}>
-              Paid Search Advertising
-            </li>
-          </ul>
+          {isMain && (
+            <nav className={styles['services__top-right']}>
+              {sideList?.map((item) => {
+                return (
+                  <Link
+                    href={item.link}
+                    className={styles['services__top-phrase']}
+                    key={item.link}
+                  >
+                    {item.title}
+                  </Link>
+                )
+              })}
+            </nav>
+          )}
         </div>
-        <div className={styles.services__main}>
-          <h3 className={styles['services__main-title']}>
-            Некоторые из возможностей нашей команды
-          </h3>
-          <ul className={styles.services__list}>
-            {servicesList.map((item) => (
-              <li className={styles['services__list-item']} key={item}>
-                <div></div>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <h3 className={styles.services__price}>От 50 000 руб.</h3>
+        {abilityList?.length && (
+          <div className={styles.services__main}>
+            <h3 className={styles['services__main-title']}>
+              Некоторые из возможностей нашей команды
+            </h3>
+            <ul className={styles.services__list}>
+              {abilityList.map((item) => (
+                <li className={styles['services__list-item']} key={item}>
+                  <div></div>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <h3 className={styles.services__price}>От {price} руб.</h3>
       </section>
     </div>
   )
